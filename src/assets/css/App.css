@@ -1,0 +1,389 @@
+:root {
+  --bg-header: #0c206a;
+  --bg-page: #f9fafb;
+  --text-primary: #111827;
+  --border-color: #e5e7eb;
+}
+
+[data-theme="dark"] {
+  --bg-header: #1f2937;
+  --bg-page: #111827;
+  --text-primary: #f9fafb;
+  --border-color: #374151;
+}
+
+body {
+  background: var(--bg-page);
+  color: var(--text-primary);
+}
+
+#root {
+  min-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 3em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+input,
+select {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.flight-list {
+  min-height: 700px;
+  max-height: 1000px;
+  overflow-y: scroll;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.flight-card {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.flight-card-header {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.flight-date {
+  min-width: 100px;
+  font-size: 16px;
+  color: #666;
+  width: 13%;
+  padding: 10px 10px;
+}
+
+/* Search */
+.search-wrapper {
+  display: flex;
+  gap: 12;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.sr-only {
+  display: none;
+}
+
+.search-wrapper input,
+.search-wrapper select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+input.search-from-input,
+input.search-to-input {
+  width: 33%;
+  font-size: 24px;
+  margin: 5px 10px;
+}
+
+select.search-from-input,
+select.search-to-input {
+  width: 15%;
+  font-size: 24px;
+  margin: 5px 10px;
+}
+
+.dateflight-date,
+.select-flight-status {
+  margin: 5px 10px;
+}
+
+.select-flight-status {
+  margin: 0px 20px;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.select-flight-status {
+  width: max-content;
+  font-size: large;
+}
+
+.From-To {
+  display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+  font-size: 22px;
+  margin: 2px 10px;
+  color: #64d743;
+}
+
+.filter-bar {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.filter-bar input,
+.filter-bar select {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.pagination {
+  display: flex;
+  gap: 8px;
+  /* margin-top: 16px; */
+  justify-content: center;
+  margin: 25px;
+}
+
+/* Comment */
+
+.comment-input-wrapper {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.comment-textarea {
+  padding: 5px;
+  min-width: 75%;
+}
+
+.comment-card {
+  /* background: var(--card-bg, #fff); */
+  background: var(--bg-page);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.comment-meta {
+  color: #6b7280;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.comment-body {
+  margin: 8px 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.comment-body textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  resize: vertical;
+  font-size: 14px;
+}
+
+.comment-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.comment-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  color: #2563eb;
+}
+
+.btn-primary {
+  margin-top: 6px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-danger {
+  color: #dc2626;
+}
+
+.add-comment-button {
+  width: 25%;
+  text-align: center;
+  margin: 25px auto 25px auto;
+}
+
+.comment-body h1,
+.comment-body h2,
+.comment-body h3 {
+  margin-top: 8px;
+}
+
+.comment-body code {
+  background: #f3f4f6;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.comment-body pre {
+  background: #111827;
+  color: #f9fafb;
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.comment-history {
+  margin-top: 8px;
+}
+
+.comment-history summary {
+  cursor: pointer;
+  font-size: 13px;
+  color: #374151;
+}
+
+.history-item {
+  margin-top: 6px;
+  padding: 6px;
+  border-left: 2px solid #e5e7eb;
+  font-size: 13px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --card-bg: #111827;
+  }
+
+  .comment-card {
+    border-color: #1f2933;
+  }
+
+  .comment-body code {
+    background: #1f2937;
+    color: #f9fafb;
+  }
+}
+
+/* Dark mode */
+body.dark {
+  background: #121212;
+  color: #eaeaea;
+}
+
+body.dark .info-card {
+  background: #1e1e1e;
+}
+
+body.dark .map-placeholder {
+  background: #2c2c2c;
+}
+
+/* Charts */
+.status-active {
+  color: #16a34a;
+  font-size: 0.6rem;
+}
+
+.chart-card {
+  background: var(--card-bg, #fff);
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Header */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  padding: 10px 25px;
+  background: var(--bg-header);
+  border-bottom: 1px solid var(--border-color);
+  border-radius: 25px;
+  ;
+}
+
+.nav-left {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-theme button svg {
+  vertical-align: middle;
+}
+
+/* Footer */
+.app-footer {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-header);
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 14px;
+}

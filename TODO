@@ -1,0 +1,66 @@
+## Mini React Assignment: Interactive Dashboard with Public APIs
+
+```Build a React app that fetches data from a public API and includes dynamic interactions like filtering, selection, state sharing, and messaging between components.```
+
+#### 1. Pages / Views
+
+	- Home Page
+	- Item Detail Page
+	- Dashboard / Stats Page
+	- About / Info Page
+
+#### 2. Dynamic Interaction Components
+
+	- Search/Filter Component
+	- Favorites Component
+	- Comment Box
+	- Interactive Chart
+
+#### 3. State Management & Communication
+
+    - Component-level state: For search input, comment input, toggle buttons
+    - Shared state: Favorites, selected item stats
+    - Props drilling or Context API: For communication between Header, Home, and Favorites components
+
+#### 4. Suggested Public APIs
+
+    - PokéAPI (https://pokeapi.co/api/v2/pokemon) → Pokémon list, types
+    - JSONPlaceholder (https://jsonplaceholder.typicode.com/posts) → Posts, users, comments
+    - OMDb API → Movies, ratings, genres
+    - CoinGecko API → Coins, prices, categories
+    - Rapid API → https://rapidapi.com/collections
+
+#### 5. Features
+
+    - Data fetching with fetch or axios
+    - Loading & error handling states
+    - Routing with React Router
+    - Favorites/bookmarks with shared state
+    - Dynamic charts & statistics
+    - Interactive comment section
+
+#### 6. Bonus
+
+    - Persist favorites and comments in localStorage
+    - Add a notification toast when user adds/removes favorites or comments
+    - Add pagination or infinite scroll for large data sets
+    - Add drag-and-drop reordering of favorite items (React DnD)
+
+#### 7. Deliverables
+
+    - React project in GitHub
+    - Functional pages with  dynamic data (using useEffect)
+    - Interactive stateful components (favorites, search, comments)
+    - Dashboard with dynamic stats or charts
+    - README explaining
+
+
+## TODO
+
+#### Flight Status Dashboard
+    - Fetch real-time status (delayed / on time / landed)
+    - Filter by airport, airline, flight number
+    - Search airports by code / city
+    - Show upcoming departures/arrivals
+    - Real-time aircraft routes on map ( optional )
+    - Click to see flight details
