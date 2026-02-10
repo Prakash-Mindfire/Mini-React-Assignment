@@ -1,6 +1,6 @@
 // src/utils/flightMapper.tsx
 import mockData from "../mocks/mock_all_flights.json";
-import type { AviationStackFlight, FlightStatus } from "../types/aviation";
+import type { AviationStackFlight, AviationStackResponse, FlightStatus } from "../types/aviation";
 
 /* ---------------- RAW API TYPES (ONLY USED HERE) ---------------- */
 
@@ -60,16 +60,6 @@ export interface RawFlightData {
   } | null;
 
   live?: any;
-}
-
-export interface AviationStackResponse {
-  data: RawFlightData[];
-  pagination: {
-    limit: number;
-    offset: number;
-    count: number;
-    total: number;
-  };
 }
 
 /* ---------------- PUBLIC API ---------------- */
@@ -215,7 +205,6 @@ function calculateDuration(dep: string, arr: string): number {
 }
 
 export async function loadMockFlights(): Promise<AviationStackResponse<any>> {
-  await new Promise((res) => setTimeout(res, 300));
   return mockData as AviationStackResponse<any>;
 }
 

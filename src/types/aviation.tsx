@@ -75,3 +75,13 @@ export interface AviationStackFlight {
     is_canceled: boolean;
   };
 }
+
+export interface AviationStackResponse<T> {
+  pagination?: {
+    limit: number;
+    offset: number;
+    count: number;
+    total: number;
+  };
+  data: T[];
+}

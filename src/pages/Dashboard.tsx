@@ -71,7 +71,7 @@ const Dashboard = () => {
             });
 
             setFlights(mapAviationStackResponse(response));
-            setTotal(response.pagination.total);
+            setTotal(response.pagination?.total ?? 0);
 
         } catch (err) {
             console.log(err);
