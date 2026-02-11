@@ -50,9 +50,7 @@ const Dashboard = () => {
             setError(null);
 
             const USE_MOCK = import.meta.env.VITE_USE_MOCK === "true";
-
-            // let flightsData: AviationStackFlight[];
-            console.log("Using mock data:", USE_MOCK);
+            // console.log("Using mock data:", USE_MOCK);
 
             if (USE_MOCK) {
                 const response = await loadMockFlights();

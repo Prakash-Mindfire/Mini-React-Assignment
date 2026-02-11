@@ -6,7 +6,6 @@ const STEPS = ["scheduled", "active", "landed"];
 
 export default function StatusTimeline({ status }: Props) {
   const currentIndex = STEPS.indexOf(status);
-  console.log(currentIndex);
 
   return (
     <div className="status-timeline">

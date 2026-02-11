@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import FlightDetailsModal from "./FlightDetailsModal";
 import type { AviationStackFlight } from "../../types/aviation";
 import { useFavorites } from "../../context/FavoritesContext";
@@ -79,7 +79,7 @@ const FlightCard = ({ flight }: Props) => {
 
         <div>
           <span className="flight-date">
-            <FaRegCalendarAlt/> {formatFlightDate(flight.departure.scheduled)}
+            <FaRegCalendarAlt /> {formatFlightDate(flight.departure.scheduled)}
           </span>
         </div>
 
@@ -101,7 +101,7 @@ const FlightCard = ({ flight }: Props) => {
           )
         }
 
-        <button
+        {/* <button
           onClick={(e) => {
             e.stopPropagation();
             navigate(`/flight/${flight.flight.iata}/${flight.flight_date}`);
@@ -114,7 +114,12 @@ const FlightCard = ({ flight }: Props) => {
           }}
         >
           View More
-        </button>
+        </button> */}
+        <Link
+        className="flight-link"
+          to={`/flight/${flight.flight.iata}/${flight.flight_date}`}
+          state={{ flight }}
+        >View Details</Link>
       </div>
 
       <FlightDetailsModal

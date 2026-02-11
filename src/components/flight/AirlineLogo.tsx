@@ -8,18 +8,12 @@ export default function AirlineLogo({ iata, name }: Props) {
 
     return (
         <img
+        className="airline-logo"
             src={logoUrl}
             alt={name}
             onError={(e) => {
                 (e.currentTarget as HTMLImageElement).src =
                     "https://via.placeholder.com/80?text=Airline";
-            }}
-            style={{
-                height: 30,
-                objectFit: "contain",
-                background: "#ffffff",
-                padding: 5,
-                borderRadius: 5
             }}
         />
     );
