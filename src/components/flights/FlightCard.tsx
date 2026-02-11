@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import FlightDetailsModal from "./FlightDetailsModal";
 import type { AviationStackFlight } from "../../types/aviation";
 import { useFavorites } from "../../context/FavoritesContext";
@@ -14,8 +14,6 @@ type Props = {
 };
 
 const FlightCard = ({ flight }: Props) => {
-
-  const navigate = useNavigate();
 
   const { toggleFavorite, isFavorite } = useFavorites();
   const fav = isFavorite(flight.flight.iata);
@@ -101,22 +99,8 @@ const FlightCard = ({ flight }: Props) => {
           )
         }
 
-        {/* <button
-          onClick={(e) => {
-            e.stopPropagation();
-            navigate(`/flight/${flight.flight.iata}/${flight.flight_date}`);
-          }}
-          style={{
-            marginTop: 8,
-            padding: "4px 8px",
-            fontSize: 12,
-            cursor: "pointer",
-          }}
-        >
-          View More
-        </button> */}
         <Link
-        className="flight-link"
+          className="flight-link"
           to={`/flight/${flight.flight.iata}/${flight.flight_date}`}
           state={{ flight }}
         >View Details</Link>

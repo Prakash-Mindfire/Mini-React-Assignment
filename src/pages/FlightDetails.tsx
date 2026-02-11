@@ -80,7 +80,6 @@ export default function FlightDetails() {
                 <InfoRow label="Airport" value={flight.arrival.airport} />
                 <InfoRow label="Terminal" value={flight.arrival.terminal} />
                 <InfoRow label="Gate" value={flight.arrival.gate} />
-                <InfoRow label="Baggage" value={flight.arrival.baggage} />
                 <InfoRow label="Scheduled" value={renderDate(flight.arrival.scheduled)} />
                 <InfoRow label="Estimated" value={renderDate(flight.arrival.estimated)} />
                 <InfoRow label="Actual" value={renderDate(flight.arrival.actual)} />
