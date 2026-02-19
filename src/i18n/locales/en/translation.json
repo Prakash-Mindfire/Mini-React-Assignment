@@ -1,0 +1,46 @@
+{
+    "flight_status": "Flight Status",
+    "departure": "Departure",
+    "arrival": "Arrival",
+    "comments": {
+        "title": "Comments for {{flight}} ",
+        "add_comment": "Add Comment",
+        "comment_placeholder": "Write your comment in Markdown...",
+        "textbox_info": "Supports Markdown: **bold**, _italic_, `code`, lists"
+    },
+    "status": {
+        "title":"Status",
+        "scheduled": "Scheduled",
+        "active": "Active",
+        "landed": "Landed",
+        "delayed": "Delayed",
+        "cancelled": "Canceled"
+    },
+    "pages" : {
+        "dashboard" : "Dashboard",
+        "favorites" : "Favorites"
+    },
+    "theme" : {
+        "dark" : "Dark",
+        "light" : "Light"
+    },
+    "dashboard" : {
+        "title" : "Flight Status Dashboard",
+        "status_title" : "Airline Status",
+        "loading_flight":"Loading flights...",
+        "flight_charts" : "Flight Charts",
+        "flight_status" : "Flight Status",
+        "flight_timeline" : "Flight Timeline",
+        "flight_date" : "Flight Date",
+        "flight_progress" : "Flight Progress"
+    },
+    "favorite" : {
+        "title" : "Favorite Flights",
+        "no_favorite_flights_yet" : "No favorite flights yet."
+    },
+    "flight" : {
+        "title" : "Flight",
+        "back" : "Back",
+        "no_flights" : "Flight data not available. Please return to dashboard."
+    }
+}

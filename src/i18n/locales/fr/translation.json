@@ -1,0 +1,8 @@
+{
+    "flight_status": "Statut du vol",
+    "departure": "Départ",
+    "arrival": "Arrivée",
+    "comments": {
+        "title": "Comments for {{flight}}"
+    }
+}

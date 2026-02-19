@@ -1,4 +1,4 @@
-import type { RawFlightData } from "../utils/flightMapper";
+import type { RawFlightData } from "../features/flights/utils/flightMapper";
 
 export const mockFlights: RawFlightData[] = [
     {
